@@ -1,0 +1,24 @@
+{
+  "name": "zabbix-canary",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/splitice/zabbix-canary.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/splitice/zabbix-canary/issues"
+  },
+  "homepage": "https://github.com/splitice/zabbix-canary#readme",
+  "dependencies": {
+    "@halleyassist/q-lite": "^0.9.21",
+    "nodemailer": "^6.8.0",
+    "zabbix-client": "^1.2.7"
+  }
+}
