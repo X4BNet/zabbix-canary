@@ -5,6 +5,7 @@ const {ZabbixClient} = require('zabbix-client'),
 const RecordThreshold = 60 * 30
 const EmailAlertFrom = process.env.EMAIL_ALERT_FROM
 const EmailAlertTo = process.env.EMAIL_ALERT_TO
+const ZabbixName = process.env.ZABBIX_NAME || "development"
 
 let s = NodeMailer.createTransport({
     sendmail: true,
@@ -30,7 +31,7 @@ async function getLatest(api, historyType){
 async function sendAlert(reason) {
     const mail = {
         to: EmailAlertTo,
-        subject: `Zabbix Canary failure (${reason})`,
+        subject: `${ZabbixName} Zabbix Canary failure`,
         text: `Zabbix Canary failure (${reason})`
     }
     if(EmailAlertFrom) {
